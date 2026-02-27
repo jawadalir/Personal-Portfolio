@@ -69,6 +69,15 @@ body {
   color: var(--accent);
 }
 
+.logo-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  color: var(--accent);
+}
+
 .navbar nav {
   display: flex;
   flex-wrap: wrap;
@@ -160,6 +169,8 @@ body {
   justify-content: space-between;
   font-size: 0.9rem;
 }
+
+
 
 .skill-level {
   width: 100%;
@@ -579,6 +590,126 @@ textarea:focus {
   color: #e0f2fe;
 }
 
+/* Project cards (projects page) – clickable */
+.project-card {
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.9);
+}
+.project-card:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+.project-cards-list .card-cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+/* Project detail modal */
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.project-modal-overlay.is-open {
+  display: flex;
+}
+.project-modal {
+  width: 75%;
+  max-width: 720px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: radial-gradient(circle at top left, #1f2937, #0f172a);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+.project-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.2);
+  color: var(--text-main);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+.project-modal-close:hover {
+  background: rgba(148, 163, 184, 0.35);
+}
+.project-modal-inner {
+  padding: 2rem 2.5rem 2rem;
+}
+.project-modal-inner h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+}
+.project-modal-meta {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.project-modal-body {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.project-modal-lead {
+  margin: 0 0 1.25rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+.project-modal-body h3 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+.project-modal-body p,
+.project-modal-body ul {
+  margin: 0 0 0.75rem;
+}
+.project-modal-body ul {
+  padding-left: 1.25rem;
+}
+.project-modal-body li {
+  margin-bottom: 0.35rem;
+}
+.project-modal {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.6) transparent;
+}
+.project-modal::-webkit-scrollbar {
+  width: 6px;
+}
+.project-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.project-modal::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.6);
+  border-radius: 999px;
+}
+
 /* Tablet and down */
 @media (max-width: 768px) {
   .section {
@@ -622,10 +753,12 @@ textarea:focus {
     max-width: 100%;
   }
 
-  .experience-modal {
+  .experience-modal,
+  .project-modal {
     width: 95%;
   }
-  .experience-modal-inner {
+  .experience-modal-inner,
+  .project-modal-inner {
     padding: 1.75rem 1.5rem;
   }
 }

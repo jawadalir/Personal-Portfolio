@@ -7,69 +7,98 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
+  <!-- <header class="navbar">
     <div class="nav-container">
-      <div class="logo">MyPortfolio</div>
+      <div class="logo"><a href="index.html" class="logo-link">MyPortfolio</a></div>
       <nav>
         <a href="index.html#about">About</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#experience">Experience</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#projects">Projects</a>
-        <a href="index.html#education">Education</a>
         <a href="index.html#contact">Contact</a>
         <a href="assets/Latest_cv.pdf" download class="nav-cta">Download CV</a>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <main>
     <section class="section">
       <div class="container">
         <h1>Projects</h1>
-        <p>Here are some of my favorite personal projects.</p>
+        <p>Click any project to view full details.</p>
 
-        <div class="vertical-list">
-          <article class="card">
-            <h2>Portfolio Website</h2>
-            <p class="card-subtitle">HTML, CSS, JavaScript</p>
-            <p>
-              A responsive portfolio to showcase my work, skills, and contact
-              details.
-            </p>
-            <a href="#" class="card-link">View Live (optional)</a>
+        <div class="vertical-list project-cards-list">
+          <article class="card project-card" data-project-id="analyzer" role="button" tabindex="0">
+            <h2>AI Business Analyzer (RAG Agent)</h2>
+            <p class="card-subtitle">Python, RAG, Generative AI</p>
+            <p>RAG-based agent that generates BRD, stakeholder files, FRD, user stories from project info.</p>
+            <span class="card-cta">Click for full details →</span>
           </article>
 
-          <article class="card">
-            <h2>Todo App</h2>
-            <p class="card-subtitle">React</p>
-            <p>
-              A task management application with add, edit, and filter
-              features.
-            </p>
-            <a href="#" class="card-link">View Live (optional)</a>
+          <article class="card project-card" data-project-id="vehicle-insurance" role="button" tabindex="0">
+            <h2>Vehicle Insurance – MLOps</h2>
+            <p class="card-subtitle">MLOps, Python, ML pipelines</p>
+            <p>End-to-end MLOps project with full lifecycle; all MLOps techniques except Kubernetes.</p>
+            <span class="card-cta">Click for full details →</span>
           </article>
 
-          <article class="card">
-            <h2>Weather Dashboard</h2>
-            <p class="card-subtitle">JavaScript, API</p>
-            <p>
-              Displays current weather conditions using an external weather
-              API.
-            </p>
-            <a href="#" class="card-link">View Live (optional)</a>
+          <article class="card project-card" data-project-id="web-scraping" role="button" tabindex="0">
+            <h2>Web Scraping Pipeline</h2>
+            <p class="card-subtitle">Python, Cron, Data Engineering</p>
+            <p>Scrapes used vehicles from Belgium, 50 features, cron jobs, growing dataset.</p>
+            <span class="card-cta">Click for full details →</span>
+          </article>
+
+          <article class="card project-card" data-project-id="job-portal" role="button" tabindex="0">
+            <h2>Job Portal Website</h2>
+            <p class="card-subtitle">MERN Stack, JWT, React</p>
+            <p>Full-featured job portal with multi-role access for job seekers, recruiters, and admins.</p>
+            <span class="card-cta">Click for full details →</span>
+          </article>
+
+          <article class="card project-card" data-project-id="handwritten" role="button" tabindex="0">
+            <h2>Handwritten Recognition</h2>
+            <p class="card-subtitle">Deep Learning, Computer Vision</p>
+            <p>ML/DL-based handwritten text recognition system.</p>
+            <span class="card-cta">Click for full details →</span>
+          </article>
+
+          <article class="card project-card" data-project-id="vehicle-price" role="button" tabindex="0">
+            <h2>Vehicle Price Prediction</h2>
+            <p class="card-subtitle">ML, Scikit-learn, Streamlit</p>
+            <p>Regression model for vehicle resale value with EDA, feature engineering, and evaluation.</p>
+            <span class="card-cta">Click for full details →</span>
+          </article>
+
+          <article class="card project-card" data-project-id="hezop" role="button" tabindex="0">
+            <h2>HEZOP – P&ID Analysis & HAZOP Automation</h2>
+            <p class="card-subtitle">Python, RAG, Gen AI, AutoCAD</p>
+            <p>AI-powered P&ID analysis and automated HAZOP risk documentation.</p>
+            <span class="card-cta">Click for full details →</span>
           </article>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Project detail modal -->
+  <div class="project-modal-overlay" id="project-modal-overlay" aria-hidden="true">
+    <div class="project-modal" id="project-modal" role="dialog" aria-labelledby="project-modal-title">
+      <button type="button" class="project-modal-close" id="project-modal-close" aria-label="Close">×</button>
+      <div class="project-modal-inner" id="project-modal-inner">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
-      &copy; <span id="year"></span> Your Name. All rights reserved.
+      &copy; <span id="year"></span> Jawad Ali. All rights reserved.
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="projects.js"></script>
 </body>
 </html>
