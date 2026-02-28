@@ -1,3 +1,20 @@
+// Scroll-triggered animations (FadeRight / FadeUp style from demo)
+(function () {
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+  );
+  document.querySelectorAll(".animate-fade-right, .animate-fade-up").forEach(function (el) {
+    observer.observe(el);
+  });
+})();
+
 // Smooth scroll for same-page links
 document.addEventListener("click", function (e) {
   const link = e.target.closest('a[href^="#"]');
