@@ -2,366 +2,388 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jawad Ali — AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">MyPortfolio</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-        <a href="assets/Latest_cv.pdf" download class="nav-cta">Download CV</a>
-      </nav>
+
+  <nav class="navbar">
+    <span class="nav-logo">jawad.ali / <span class="accent-text">ai-engineer</span></span>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#certifications">certs</a>
+      <a href="#contact">contact</a>
+      <a href="assets/Jawad_CV.pdf" download class="nav-cta">cv</a>
     </div>
-  </header>
+  </nav>
 
   <main>
-    <!-- About -->
-    <section id="about" class="section about-section">
-      <div class="container about-container">
-        <div class="about-intro animate-fade-right">
-          <div class="about-image about-image-oval">
-            <img src="assets/profile.png" alt="Jawad Ali" />
-          </div>
-          <h1>Hi, I'm Jawad Ali</h1>
-          <p class="about-tagline">AI Engineer & Full-Stack Developer — MERN, ML & Generative AI.</p>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-glow2" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">● available for opportunities</div>
+        <h1>
+          <span class="line1">Jawad <span class="accent-text">Ali</span></span>
+          <span class="line2">AI Engineer</span>
+        </h1>
+        <p class="hero-desc">
+          Building production-ready generative AI systems, agentic workflows, and LLM applications that solve real business problems. Based in Rawalpindi / Islamabad — open to remote roles globally.
+        </p>
+        <div class="hero-cta">
+          <a href="mailto:jawadaliraja2022@gmail.com" class="btn-primary">get in touch</a>
+          <a href="#projects" class="btn-secondary">view projects</a>
+          <a href="assets/Jawad_CV.pdf" download class="btn-secondary">download cv</a>
         </div>
-        <div class="about-divider" aria-hidden="true"></div>
-        <div class="about-contact animate-fade-right">
-          <p class="about-contact-name">Jawad Ali</p>
-          <p class="about-contact-row">
-            <span class="about-contact-label">Email</span>
-            <a href="mailto:jawadaliraja2022@gmail.com">jawadaliraja2022@gmail.com</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">1+</span>
+          <span class="stat-label">years production AI</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">AI agents shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">cloud platforms</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Skills -->
+    <section id="about" class="page-section">
+      <span class="section-tag">// 01 — about</span>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2>Building the <span class="accent-text">agentic</span> layer</h2>
+          <p>I'm a <strong>BS Artificial Intelligence</strong> graduate from COMSATS University Islamabad, currently working as an <strong>AI/ML Engineer</strong> at <strong>OptimAIze BE</strong> (Belgium, remote).</p>
+          <p>
+            Results-driven engineer with hands-on experience building production-ready Generative AI systems, LLM applications, and end-to-end automation pipelines. I specialize in <strong>LangChain/LangGraph multi-agent systems</strong>, RAG pipelines with FAISS and Pinecone, and n8n orchestration — deploying scalable solutions on AWS, Azure, and GCP.
           </p>
-          <p class="about-contact-row">
-            <span class="about-contact-label">GitHub</span>
-            <a href="https://github.com/jawadalir" target="_blank" rel="noopener">github.com/jawadalir</a>
+          <p>
+            Proficient in MLOps with MLflow, Docker, and CI/CD; experienced in fine-tuning transformers, prompt engineering, and Copilot Studio. Solid background in classical and deep learning (CNNs, RNNs, LSTMs, XGBoost, LightGBM, CatBoost). I care about clean architectures and AI that delivers measurable business value.
           </p>
-          <p class="about-contact-row">
-            <span class="about-contact-label">LinkedIn</span>
-            <a href="https://linkedin.com/in/jawad-ali-142645286" target="_blank" rel="noopener">linkedin.com/in/jawad-ali-142645286</a>
+          <p class="about-contact-inline">
+            <a href="mailto:jawadaliraja2022@gmail.com">jawadaliraja2022@gmail.com</a> ·
+            <a href="tel:+923155720296">+92 315 5720296</a>
           </p>
-          <p class="about-contact-row about-contact-optional">
-            <span class="about-contact-label">Fiverr</span>
-            <a href="https://fiverr.com/yourprofile" target="_blank" rel="noopener">fiverr.com/yourprofile</a>
-          </p>
-          <p class="about-contact-row">
-            <span class="about-contact-label">Location</span>
-            <span>Rawalpindi, Pakistan</span>
-          </p>
-          <div class="about-contact-logos">
-            <a href="https://github.com/jawadalir" target="_blank" rel="noopener" class="about-logo-link" aria-label="GitHub">
-              <img src="assets/Logo/github.png" alt="GitHub" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="about-logo-link" aria-label="Twitter">
-              <img src="assets/Logo/twitter.png" alt="Twitter" />
-            </a>
-            <a href="https://linkedin.com/in/jawad-ali-142645286" target="_blank" rel="noopener" class="about-logo-link" aria-label="LinkedIn">
-              <img src="assets/Logo/linkedin.png" alt="LinkedIn" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="about-logo-link" aria-label="Instagram">
-              <img src="assets/Logo/instagram.png" alt="Instagram" />
-            </a>
+        </div>
+
+        <div class="skills-cluster reveal">
+          <div>
+            <p class="skill-group-label">Agents &amp; GenAI</p>
+            <div class="tags">
+              <span class="tag purple">LangChain</span>
+              <span class="tag purple">LangGraph</span>
+              <span class="tag purple">ReAct Agents</span>
+              <span class="tag purple">Copilot Studio</span>
+              <span class="tag purple">Prompt Engineering</span>
+              <span class="tag purple">RAG</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">LLMs &amp; Models</p>
+            <div class="tags">
+              <span class="tag teal">OpenAI GPT-4o</span>
+              <span class="tag teal">Claude API</span>
+              <span class="tag teal">HuggingFace</span>
+              <span class="tag teal">Mistral AI</span>
+              <span class="tag teal">Ollama</span>
+              <span class="tag teal">Gemini</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Vector &amp; Retrieval</p>
+            <div class="tags">
+              <span class="tag coral">FAISS</span>
+              <span class="tag coral">Pinecone</span>
+              <span class="tag coral">ChromaDB</span>
+              <span class="tag coral">Elasticsearch</span>
+              <span class="tag coral">OpenSearch</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">MLOps &amp; Cloud</p>
+            <div class="tags">
+              <span class="tag gray">Docker</span>
+              <span class="tag gray">MLflow</span>
+              <span class="tag gray">Kubernetes</span>
+              <span class="tag gray">AWS</span>
+              <span class="tag gray">Azure</span>
+              <span class="tag gray">GCP</span>
+              <span class="tag gray">CI/CD</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Automation &amp; Backend</p>
+            <div class="tags">
+              <span class="tag gray">n8n</span>
+              <span class="tag gray">Make.com</span>
+              <span class="tag gray">FastAPI</span>
+              <span class="tag gray">Flask</span>
+              <span class="tag gray">PostgreSQL</span>
+              <span class="tag gray">MongoDB</span>
+              <span class="tag gray">Redis</span>
+              <span class="tag gray">React.js</span>
+              <span class="tag gray">MERN</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">ML &amp; Data</p>
+            <div class="tags">
+              <span class="tag gray">scikit-learn</span>
+              <span class="tag gray">XGBoost</span>
+              <span class="tag gray">PyTorch</span>
+              <span class="tag gray">TensorFlow</span>
+              <span class="tag gray">Pandas</span>
+              <span class="tag gray">Selenium</span>
+              <span class="tag gray">BeautifulSoup</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills (before experience) -->
-    <section id="skills" class="section animate-fade-up">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">Machine Learning</span>
-          <span class="skill-pill">MLOPS</span>
-          <span class="skill-pill">AI Automation</span>
-          <span class="skill-pill">Mern Stack developement</span>
-          <span class="skill-pill">Deep Learning</span>
-          <span class="skill-pill">Computer Vision</span>
-          <span class="skill-pill">Git &amp; GitHub</span>
-          <span class="skill-pill">DEVOPs</span>
-        </div>
-        <div class="skills-bars">
-          <div class="skill-item">
-            <div class="skill-label">
-              <span>Python</span>
-              <span>90%</span>
-            </div>
-            <div class="skill-level">
-              <div class="skill-level-fill" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">
-              <span>Machine Learning</span>
-              <span>90%</span>
-            </div>
-            <div class="skill-level">
-              <div class="skill-level-fill" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">
-              <span>MLOPS</span>
-              <span>75%</span>
-            </div>
-            <div class="skill-level">
-              <div class="skill-level-fill" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">
-              <span>AI Automation</span>
-              <span>90%</span>
-            </div>
-            <div class="skill-level">
-              <div class="skill-level-fill" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">
-              <span>Mern Stack developement</span>
-              <span>75%</span>
-            </div>
-            <div class="skill-level">
-              <div class="skill-level-fill" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">
-              <span>Deep Learning</span>
-              <span>80%</span>
-            </div>
-            <div class="skill-level">
-              <div class="skill-level-fill" style="width: 80%;"></div>
-            </div>
-          </div>
-        </div>
+    <!-- Experience -->
+    <section id="experience" class="page-section page-section--surface">
+      <span class="section-tag">// 02 — experience</span>
+      <h2>Where I've <span class="accent-text">built</span></h2>
 
-        <div class="languages">
-          <h3>Languages</h3>
-          <ul class="languages-list">
-            <li>
-              <span class="language-name">English</span>
-              <span class="language-level">Intermediate</span>
-            </li>
-            <li>
-              <span class="language-name">Urdu</span>
-              <span class="language-level">Native</span>
-            </li>
-          </ul>
+      <div class="exp-item reveal">
+        <div class="exp-header">
+          <span class="exp-role">AI / ML Engineer</span>
+          <span class="exp-date">Aug 2025 — Present</span>
         </div>
-
-        <div class="soft-skills">
-          <h3>Soft Skills</h3>
-          <div class="soft-skills-grid">
-            <span class="soft-skill-pill">Problem-Solving</span>
-            <span class="soft-skill-pill">Critical Thinking</span>
-            <span class="soft-skill-pill">Adaptability</span>
-            <span class="soft-skill-pill">Time Management</span>
-            <span class="soft-skill-pill">Communication Skills</span>
-            <span class="soft-skill-pill">Responsibility &amp; Accountability</span>
-            <span class="soft-skill-pill">Self-Motivation</span>
-            <span class="soft-skill-pill">Reliability</span>
-            <span class="soft-skill-pill">Meeting Deadlines</span>
-            <span class="soft-skill-pill">Trustworthy</span>
-          </div>
+        <p class="exp-company">OptimAIze BE · Remote, Belgium</p>
+        <ul class="exp-bullets">
+          <li>Designed and deployed autonomous LangChain ReAct agents and LangGraph-based multi-agent systems, automating complex multi-step business workflows across cloud infrastructure.</li>
+          <li>Built end-to-end AI automation workflows using n8n for intelligent scheduling, data ingestion, webhook handling, routing, and third-party API orchestration.</li>
+          <li>Implemented and deployed RAG pipelines integrating FAISS and Pinecone for scalable semantic search and document-based Q&amp;A.</li>
+          <li>Developed production-grade deep learning and classical ML pipelines for classification, regression, and NLP; integrated models via FastAPI REST APIs.</li>
+          <li>Connected and fine-tuned LLMs (OpenAI GPT-4, Claude API, HuggingFace Transformers) to CRMs, databases, and operational services.</li>
+          <li>Built Streamlit interfaces to validate LLM outputs, RAG accuracy, and end-to-end agent workflows.</li>
+          <li>Enforced MLOps best practices: MLflow experiment tracking, Docker containerization, CI/CD on AWS and Azure.</li>
+          <li>Engineered prompt strategies and tool/function-calling to improve reasoning and reduce hallucinations.</li>
+          <li>Collaborated cross-functionally to deliver clean, maintainable AI architectures optimized for performance and scalability.</li>
+        </ul>
+        <div class="tags tags--spaced">
+          <span class="tag gray">LangChain</span>
+          <span class="tag gray">LangGraph</span>
+          <span class="tag purple">RAG</span>
+          <span class="tag coral">FAISS</span>
+          <span class="tag coral">Pinecone</span>
+          <span class="tag gray">n8n</span>
+          <span class="tag gray">FastAPI</span>
+          <span class="tag gray">MLflow</span>
+          <span class="tag gray">Docker</span>
+          <span class="tag gray">AWS</span>
+          <span class="tag gray">Azure</span>
         </div>
       </div>
-    </section>
 
-    <!-- Work Experience -->
-    <section id="experience" class="section animate-fade-up">
-      <div class="container">
-        <h2>Work Experience</h2>
-        <div class="cards-row experience-cards">
-          <article class="card experience-card" id="experience-card" role="button" tabindex="0">
-            <h3>AI Engineer Intern</h3>
-            <p class="card-subtitle">OptimAize.be · Aug 2025 – Present · Remote</p>
-            <p>
-              Delivered real-time automation projects, web scraping pipelines, ML-based vehicle price prediction, and AI-powered business analysis tools.
-            </p>
-            <p class="card-cta">Click to view detailed experience →</p>
-          </article>
+      <div class="exp-item reveal exp-item--dim">
+        <div class="exp-header">
+          <span class="exp-role">BS in Artificial Intelligence</span>
+          <span class="exp-date">2022 — 2026</span>
         </div>
-      </div>
-    </section>
-
-    <!-- Experience detail modal -->
-    <div class="experience-modal-overlay" id="experience-modal-overlay" aria-hidden="true">
-      <div class="experience-modal" id="experience-modal" role="dialog" aria-labelledby="experience-modal-title">
-        <button type="button" class="experience-modal-close" id="experience-modal-close" aria-label="Close">×</button>
-        <div class="experience-modal-inner">
-          <h2 id="experience-modal-title">AI Engineer Intern – Detailed Experience</h2>
-          <p class="experience-modal-meta">OptimAize.be · Aug 2025 – Present · Remote</p>
-
-          <h3>Role & Impact</h3>
-          <p>
-            As an AI Engineer Intern at OptimAize.be I work on turning real business problems into production-ready AI solutions, from understanding requirements and exploring data to deploying reliable systems that support day‑to‑day decision‑making.
-          </p>
-          <h3>AI & Data Experience</h3>
-          <p>
-            My work spans real-time automation around Hezop workflows, where I integrate PID readings and structured study reporting to make process monitoring faster and more consistent, as well as large-scale web scraping pipelines that collect vehicle listings from sources like Autoscout.be. I clean, join, and enrich this data to build high‑quality datasets, then apply machine learning, data engineering, and data science techniques to train and evaluate vehicle price prediction models that are explainable and useful to stakeholders.
-          </p>
-          <h3>AI Agents & Collaboration</h3>
-          <p>
-            Alongside this, I contribute to an AI “business analyser” agent that uses Retrieval‑Augmented Generation and LangChain to surface insights from company knowledge, build a job‑posting website that highlights open roles, and create internal tools and dashboards with Streamlit. Through these projects I’ve deepened my skills in Python, ML/AI, and modern tooling, learned to collaborate effectively on GitHub with cross‑functional teams, and developed a strong sense of ownership, communication, and delivery under real deadlines.
-          </p>
-
-          <h3>Key Tools & Technologies</h3>
-          <div class="experience-tools">
-            <span class="tool-pill">Python</span>
-            <span class="tool-pill">Data Science</span>
-            <span class="tool-pill">Machine Learning</span>
-            <span class="tool-pill">RAG</span>
-            <span class="tool-pill">LangChain</span>
-            <span class="tool-pill">AI Agents</span>
-            <span class="tool-pill">Selenium</span>
-            <span class="tool-pill">Beautiful Soup</span>
-            <span class="tool-pill">Streamlit</span>
-            <span class="tool-pill">React</span>
-            <span class="tool-pill">Git &amp; GitHub</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Services</h2>
-<div class="cards-row">
-  <article class="card">
-    <h3>Machine Learning Model</h3>
-    <p>
-      Custom ML models for prediction and analytics.
-    </p>
-  </article>
-
-  <article class="card">
-    <h3>AI Agent Development</h3>
-    <p>
-      Intelligent AI agents with context-aware automation.
-    </p>
-  </article>
-
-  <article class="card">
-    <h3>MERN Stack Website</h3>
-    <p>
-      Full-stack web applications with secure backend.
-    </p>
-  </article>
-</div>
-        <div class="see-more-wrapper">
-          <a class="btn-outline" href="services.html">See all services</a>
-        </div>
+        <p class="exp-company">COMSATS University Islamabad</p>
+        <ul class="exp-bullets">
+          <li>Relevant coursework: Machine Learning, Deep Learning, NLP, Computer Vision, Data Science, Statistical Modelling, Neural Networks, Databases, Software Engineering.</li>
+          <li>Built strong foundations in classical and deep learning, data pipelines, and production-oriented AI through projects and team-based coursework.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section animate-fade-up">
-      <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="cards-row">
-          <article class="card">
-            <h3>AI Business Analyzer (RAG Agent)</h3>
-            <p class="card-subtitle">Python, RAG, Generative AI</p>
-            <p>
-              RAG-based agent that uses project information to auto-generate BRD, stakeholder files, FRD, non-FRD, and user stories.
-            </p>
-          </article>
+    <section id="projects" class="page-section">
+      <span class="section-tag">// 03 — projects</span>
+      <h2>Things I've <span class="accent-text">shipped</span></h2>
+      <div class="projects-grid">
 
-          <article class="card">
-            <h3>Vehicle Insurance – MLOps</h3>
-            <p class="card-subtitle">MLOps, Python, ML pipelines</p>
-            <p>
-              End-to-end MLOps project applying full ML lifecycle practices—experiment tracking, CI/CD, and deployment—excluding Kubernetes.
-            </p>
-          </article>
+        <article class="project-card reveal">
+          <p class="project-year">2026</p>
+          <h3 class="project-title">Business Analyser Agent</h3>
+          <p class="project-desc">Autonomous multi-step LangChain ReAct agent for dynamic business data analysis with tool-calling, memory management, and intelligent decision routing — deployed on AWS.</p>
+          <ul class="project-bullets">
+            <li>Integrated n8n for automated scheduling, data ingestion, and cross-service orchestration.</li>
+            <li>FastAPI REST backend with PostgreSQL; containerized with Docker and tracked with MLflow.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">LangChain ReAct</span>
+            <span class="stack-tag">OpenAI API</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">n8n</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">MLflow</span>
+            <span class="stack-tag">AWS</span>
+          </div>
+        </article>
 
-          <article class="card">
-            <h3>Web Scraping Pipeline</h3>
-            <p class="card-subtitle">Python, Cron, Data Engineering</p>
-            <p>
-              Scrapes used vehicles from Belgium, extracts 50+ features, builds a growing dataset with scheduled cron jobs.
-            </p>
-          </article>
-        </div>
-        <div class="see-more-wrapper">
-          <a class="btn-outline" href="projects.html">See all projects</a>
-        </div>
+        <article class="project-card reveal">
+          <p class="project-year">2025</p>
+          <h3 class="project-title">HEZOP Analyzer Agent</h3>
+          <p class="project-desc">AI-powered process hazard analysis integrated with AutoCAD to analyze P&amp;ID diagrams and assist safety engineers via RAG over engineering documents.</p>
+          <ul class="project-bullets">
+            <li>Identifies process hazards and supports domain-specific safety queries.</li>
+            <li>RAG pipeline over technical standards for autonomous risk assessment workflows.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">LangChain</span>
+            <span class="stack-tag">OpenAI API</span>
+            <span class="stack-tag">AutoCAD</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">Streamlit</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-year">2025</p>
+          <h3 class="project-title">Car Price Analyst Agent</h3>
+          <p class="project-desc">Scrapes Belgium second-hand car listings, applies user filters, predicts fair market prices with ML, and auto-emails recommendations.</p>
+          <ul class="project-bullets">
+            <li>End-to-end pipeline from scraping and price evaluation to autonomous email delivery.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">LangChain</span>
+            <span class="stack-tag">Selenium</span>
+            <span class="stack-tag">BeautifulSoup</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">SMTP</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-year">2026</p>
+          <h3 class="project-title">Vehicle Insurance MLOps Pipeline</h3>
+          <p class="project-desc">Full end-to-end ML pipeline for insurance claim prediction with MLflow registry, Docker inference, and AWS S3 artifacts.</p>
+          <ul class="project-bullets">
+            <li>Data preprocessing, feature engineering, training and evaluation with scikit-learn and XGBoost.</li>
+            <li>Reproducible pipelines with environment-isolated containers and structured model versioning.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">scikit-learn</span>
+            <span class="stack-tag">XGBoost</span>
+            <span class="stack-tag">MLflow</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">AWS S3</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-year">2025 · Final Year Project</p>
+          <h3 class="project-title">SmartInfo — Content Analyzer</h3>
+          <p class="project-desc">End-to-end RAG for intelligent Q&amp;A over YouTube transcripts and documents using FAISS, sentence embeddings, and fine-tuned HuggingFace transformers.</p>
+          <ul class="project-bullets">
+            <li>React.js frontend and Streamlit demo with FastAPI backend for a seamless AI copilot experience.</li>
+            <li>Hybrid retrieval and advanced prompt engineering to reduce hallucinations.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">LangChain</span>
+            <span class="stack-tag">HuggingFace</span>
+            <span class="stack-tag">FAISS</span>
+            <span class="stack-tag">React.js</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">Streamlit</span>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="cards-row">
-          <!-- Only two cards -->
-          <article class="card education-card">
-            <h3>Bachelor of Artificial Intelligence</h3>
-            <p class="card-subtitle">COMSATS Islamabad · Feb 2022 – Feb 2026</p>
-            <ul class="card-list">
-              <li>Grade : B+</li>
-              <li>Gained strong foundations in ML, DL, data science, and software engineering through projects and team-based coursework.</li>
-            </ul>
-          </article>
-
-          <article class="card education-card">
-            <h3>Intermediate (ICS)</h3>
-            <p class="card-subtitle">Punjab Group of Colleges Rawalpindi · 2019 – 2021</p>
-            <ul class="card-list">
-              <li>Result: 95% </li>
-              <li>Built a solid base in mathematics and physics, developing problem‑solving skills that support my current work in AI.</li>
-            </ul>
-          </article>
+    <!-- Certifications -->
+    <section id="certifications" class="page-section page-section--surface page-section--compact">
+      <span class="section-tag">// 04 — certifications</span>
+      <h2>Always <span class="accent-text">learning</span></h2>
+      <div class="cert-card reveal">
+        <div class="cert-icon" aria-hidden="true">🤖</div>
+        <div class="cert-body">
+          <h3>Anthropic AI Courses</h3>
+          <div class="cert-tags-list">
+            <span>Claude 101</span>
+            <span>Claude Code In Action</span>
+            <span>Claude With Anthropic API</span>
+            <span>Intro To Agent Skills</span>
+            <span>Intro to MCP</span>
+          </div>
         </div>
+        <span class="cert-date">May 2026</span>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>
-          Have a question or want to work together? Send me a message.
-        </p>
-        <form id="contact-form" class="contact-form">
+    <section id="contact" class="page-section contact-section">
+      <div class="contact-inner">
+        <div class="reveal">
+          <span class="section-tag">// 05 — contact</span>
+          <h2>Let's <span class="accent-text">build</span> something</h2>
+          <p class="contact-intro">Open to AI/ML engineering roles, agentic systems projects, and freelance automation work. Rawalpindi/Islamabad — available remote globally.</p>
+        </div>
+        <div class="contact-links reveal">
+          <a href="mailto:jawadaliraja2022@gmail.com" class="contact-link">
+            <div class="contact-link-icon em">✉</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">email</span>
+              <span class="contact-link-val">jawadaliraja2022@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+923155720296" class="contact-link">
+            <div class="contact-link-icon ph">☎</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">phone</span>
+              <span class="contact-link-val">+92 315 5720296</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/jawad-ali-142645286" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link-icon li">in</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">linkedin</span>
+              <span class="contact-link-val">jawad-ali</span>
+            </div>
+          </a>
+          <a href="https://github.com/jawadalir" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link-icon gh">⌥</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">github</span>
+              <span class="contact-link-val">jawadalir</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form reveal">
+        <div class="form-row">
           <div class="form-group">
-            <label for="name">Your Name</label>
+            <label for="name">name</label>
             <input id="name" name="name" type="text" required />
           </div>
           <div class="form-group">
-            <label for="email">Your Email</label>
+            <label for="email">email</label>
             <input id="email" name="email" type="email" required />
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-        <p class="contact-note">
-          This form opens your email app and sends the message to your inbox.
-        </p>
-      </div>
+        </div>
+        <div class="form-group">
+          <label for="message">message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">send message</button>
+      </form>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      &copy; <span id="year"></span> Jawad Ali. All rights reserved.
-    </div>
+    <p>© <span id="year"></span> Jawad Ali · AI Engineer · Rawalpindi, Pakistan</p>
+    <p>Built with intention.</p>
   </footer>
 
   <script src="script.js"></script>

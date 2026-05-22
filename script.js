@@ -1,105 +1,67 @@
-// Scroll-triggered animations (FadeRight / FadeUp style from demo)
+// Scroll reveal
 (function () {
-  var observer = new IntersectionObserver(
+  var els = document.querySelectorAll(".reveal");
+  if (!els.length) return;
+
+  var obs = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
+          entry.target.classList.add("visible");
         }
       });
     },
-    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.12 }
   );
-  document.querySelectorAll(".animate-fade-right, .animate-fade-up").forEach(function (el) {
-    observer.observe(el);
+
+  els.forEach(function (el) {
+    obs.observe(el);
   });
 })();
 
-// Smooth scroll for same-page links
+// Smooth scroll for anchor links
 document.addEventListener("click", function (e) {
-  const link = e.target.closest('a[href^="#"]');
+  var link = e.target.closest('a[href^="#"]');
   if (!link) return;
 
-  const targetId = link.getAttribute("href").slice(1);
-  const targetEl = document.getElementById(targetId);
+  var targetId = link.getAttribute("href").slice(1);
+  if (!targetId) return;
+
+  var targetEl = document.getElementById(targetId);
   if (!targetEl) return;
 
   e.preventDefault();
   targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-// Contact form -> open default email client using mailto
-const contactForm = document.getElementById("contact-form");
+// Contact form -> mailto
+var contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+    var toEmail = "jawadaliraja2022@gmail.com";
 
-    // CHANGE this to your real email address
-    const toEmail = "youremail@example.com";
+    var subject = "Portfolio Contact from " + (name || "Someone");
+    var body =
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n\n" +
+      "Message:\n" + message;
 
-    const subject = `Portfolio Contact from ${name || "Someone"}`;
-    const body =
-      `Name: ${name}\n` +
-      `Email: ${email}\n\n` +
-      `Message:\n${message}`;
-
-    const mailtoUrl =
+    window.location.href =
       "mailto:" +
       encodeURIComponent(toEmail) +
       "?subject=" +
       encodeURIComponent(subject) +
       "&body=" +
       encodeURIComponent(body);
-
-    window.location.href = mailtoUrl;
   });
 }
 
 // Footer year
-const yearSpan = document.getElementById("year");
+var yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
-
-// Experience modal: open on card click, close on overlay or close button
-(function () {
-  var card = document.getElementById("experience-card");
-  var overlay = document.getElementById("experience-modal-overlay");
-  var modal = document.getElementById("experience-modal");
-  var closeBtn = document.getElementById("experience-modal-close");
-
-  function openModal() {
-    if (!overlay) return;
-    overlay.classList.add("is-open");
-    overlay.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-    closeBtn && closeBtn.focus();
-  }
-
-  function closeModal() {
-    if (!overlay) return;
-    overlay.classList.remove("is-open");
-    overlay.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-    card && card.focus();
-  }
-
-  if (card) {
-    card.addEventListener("click", openModal);
-    card.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        openModal();
-      }
-    });
-  }
-  if (closeBtn) closeBtn.addEventListener("click", closeModal);
-  if (overlay) {
-    overlay.addEventListener("click", function (e) {
-      if (e.target === overlay) closeModal();
-    });
-  }
-})();

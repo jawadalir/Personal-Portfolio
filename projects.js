@@ -1,115 +1,66 @@
 (function () {
   var projectDetails = {
-    analyzer: {
-      title: "AI Business Analyzer (RAG Agent)",
-      subtitle: "Python, RAG, Generative AI",
-      content: "<p class=\"project-modal-lead\">An agent that uses RAG (Retrieval-Augmented Generation) over your project information to automatically produce business and product documentation.</p>" +
-        "<h3>What it does</h3>" +
-        "<ul><li>Uses existing project context as the knowledge base</li>" +
-        "<li>Generates <strong>BRD</strong> (Business Requirements Document)</li>" +
-        "<li>Produces <strong>stakeholder files</strong></li>" +
-        "<li>Creates <strong>FRD</strong> (Functional Requirements Document) and <strong>non-FRD</strong> artifacts</li>" +
-        "<li>Outputs <strong>user stories</strong> and related deliverables</li></ul>" +
-        "<h3>Technologies</h3>" +
-        "<p>Python, RAG pipelines, Generative AI (LLMs), vector stores, and orchestration frameworks.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Accelerates requirement gathering and documentation for new or existing projects with minimal manual input.</p>"
-    },
-    "vehicle-insurance": {
-      title: "Vehicle Insurance – MLOps",
-      subtitle: "MLOps, Python, ML pipelines",
-      content: "<p class=\"project-modal-lead\">A complete MLOps-style project for vehicle insurance, applying the full ML lifecycle except Kubernetes.</p>" +
-        "<h3>What it covers</h3>" +
-        "<ul><li>Data versioning and pipeline orchestration</li>" +
-        "<li>Experiment tracking and model registry</li>" +
-        "<li>Reproducible training and evaluation</li>" +
-        "<li>CI/CD for model and pipeline updates</li>" +
-        "<li>Monitoring and deployment practices</li></ul>" +
-        "<h3>Technologies</h3>" +
-        "<p>Python, ML frameworks, MLOps tooling (e.g. DVC, MLflow, or similar), containers, and automation.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Demonstrates production-grade ML workflow from development to deployment.</p>"
-    },
-    "web-scraping": {
-      title: "Web Scraping Pipeline",
-      subtitle: "Python, Cron, Data Engineering",
-      content: "<p class=\"project-modal-lead\">A pipeline that scrapes used vehicle listings from Belgium, extracts rich features, and maintains a growing dataset.</p>" +
-        "<h3>What it does</h3>" +
-        "<ul><li>Scrapes used vehicle content from Belgian sources</li>" +
-        "<li>Extracts <strong>50+ features</strong> per listing</li>" +
-        "<li>Builds and maintains a structured dataset</li>" +
-        "<li>Uses <strong>cron jobs</strong> for scheduled runs</li>" +
-        "<li>Continuously grows the dataset over time</li></ul>" +
-        "<h3>Technologies</h3>" +
-        "<p>Python, web scraping libraries (e.g. Beautiful Soup, Selenium), cron/schedulers, data storage, and ETL patterns.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Provides a reliable, up-to-date data source for vehicle price and market analysis.</p>"
-    },
-    "job-portal": {
-      title: "Job Portal Website – Full MERN Stack",
-      subtitle: "MongoDB, Express, React, Node.js, JWT",
-      content: "<p class=\"project-modal-lead\">A full-featured job portal with multi-role access for job seekers, recruiters, and administrators.</p>" +
-        "<h3>Core features</h3>" +
-        "<ul><li>Secure authentication and role-based authorization</li>" +
-        "<li>Job posting and management</li>" +
-        "<li>Job application tracking</li>" +
-        "<li>Admin dashboard for platform activity</li>" +
-        "<li>Real-time notifications</li>" +
-        "<li>Responsive UI</li></ul>" +
-        "<h3>Implementation</h3>" +
-        "<p>RESTful API, protected routes, JWT authentication, modular backend, and scalable database schema.</p>" +
-        "<h3>Technologies</h3>" +
-        "<p>MongoDB, Express.js, React.js, Node.js (MERN), JWT.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Simulates a production-ready recruitment platform with real-world system design.</p>"
-    },
-    handwritten: {
-      title: "Handwritten Recognition",
-      subtitle: "Deep Learning, Computer Vision",
-      content: "<p class=\"project-modal-lead\">A machine learning project for recognizing handwritten text using deep learning and computer vision.</p>" +
-        "<h3>Focus</h3>" +
-        "<ul><li>Model training on handwritten datasets</li>" +
-        "<li>Preprocessing and augmentation</li>" +
-        "<li>Evaluation and deployment considerations</li></ul>" +
-        "<h3>Technologies</h3>" +
-        "<p>Python, deep learning frameworks (e.g. TensorFlow/PyTorch), computer vision, and ML pipelines.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Showcases capability in DL and vision-based applications.</p>"
-    },
-    "vehicle-price": {
-      title: "Vehicle Price Prediction",
-      subtitle: "Python, Scikit-learn, Streamlit",
-      content: "<p class=\"project-modal-lead\">An end-to-end ML regression project that predicts vehicle resale value from structured features.</p>" +
-        "<h3>Workflow</h3>" +
-        "<ul><li>Data cleaning and preprocessing</li>" +
-        "<li>Feature engineering</li>" +
-        "<li>Exploratory Data Analysis (EDA)</li>" +
-        "<li>Multiple model comparison</li>" +
-        "<li>Hyperparameter tuning</li>" +
-        "<li>Evaluation with RMSE and R²</li></ul>" +
-        "<h3>Implementation</h3>" +
-        "<p>Pipeline-based architecture, model comparison, deployment-ready structure, and reproducible training.</p>" +
-        "<h3>Technologies</h3>" +
-        "<p>Python, Pandas, NumPy, Scikit-learn, Matplotlib, Streamlit.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Supports fair market price estimation and data-driven decisions in the automobile market.</p>"
+    "business-analyser": {
+      title: "Business Analyser Agent – Autonomous Generative AI System",
+      subtitle: "Python · LangChain ReAct · OpenAI API · FastAPI · PostgreSQL · n8n · Docker · MLflow · AWS · 2026",
+      content:
+        "<p class=\"project-modal-lead\">A multi-step autonomous agent for dynamic business data analysis with tool-calling, memory management, and intelligent decision routing — deployed on AWS.</p>" +
+        "<h3>Key highlights</h3>" +
+        "<ul>" +
+        "<li>Built with LangChain ReAct for autonomous business data analysis and intelligent routing.</li>" +
+        "<li>Integrated n8n for automated scheduling, data ingestion, and cross-service orchestration.</li>" +
+        "<li>Delivered FastAPI REST backend connected to PostgreSQL and third-party services.</li>" +
+        "<li>Containerized with Docker and tracked experiments with MLflow for production-grade MLOps.</li>" +
+        "</ul>"
     },
     hezop: {
-      title: "HEZOP – Intelligent P&ID Analysis & HAZOP Automation Agent",
-      subtitle: "Python, RAG, Generative AI, AutoCAD",
-      content: "<p class=\"project-modal-lead\">An AI-powered system that reads P&ID (Piping & Instrumentation Diagram) files from AutoCAD, analyzes process connections, and generates HAZOP-based risk documentation.</p>" +
-        "<h3>What the system does</h3>" +
-        "<ul><li>Reads P&ID diagrams from AutoCAD exports</li>" +
-        "<li>Extracts components, nodes, pipelines, and connections</li>" +
-        "<li>Analyzes edges and process flow</li>" +
-        "<li>Uses company HAZOP reports as domain knowledge</li>" +
-        "<li>Acts as an intelligent HAZOP analyzer agent</li></ul>" +
-        "<h3>Core capabilities</h3>" +
-        "<p>Diagram parsing, graph-based connection modeling, process flow interpretation, risk identification, and automated HAZOP report generation using RAG and generative AI.</p>" +
-        "<h3>Technologies</h3>" +
-        "<p>Python, Generative AI, RAG, graph modeling, AutoCAD file parsing, and data pipelines.</p>" +
-        "<h3>Impact</h3>" +
-        "<p>Reduces manual engineering review time and helps safety engineers with hazard identification and industrial risk documentation.</p>"
+      title: "HEZOP Analyzer Agent",
+      subtitle: "Python · LangChain · OpenAI API · AutoCAD Integration · FastAPI · Streamlit · 2025",
+      content:
+        "<p class=\"project-modal-lead\">An AI-powered HEZOP analysis agent integrated with AutoCAD to analyze P&amp;ID diagrams and support safety engineers.</p>" +
+        "<h3>Key highlights</h3>" +
+        "<ul>" +
+        "<li>Analyzes P&amp;ID diagrams, identifies process hazards, and assists with domain-specific safety queries.</li>" +
+        "<li>RAG pipeline over engineering safety documents for reasoning over technical standards.</li>" +
+        "<li>Autonomously supports risk assessment workflows for HEZOP engineers.</li>" +
+        "</ul>"
+    },
+    "car-price-analyst": {
+      title: "Car Price Analyst Agent",
+      subtitle: "Python · LangChain · OpenAI API · Selenium · BeautifulSoup · FastAPI · SMTP · 2025",
+      content:
+        "<p class=\"project-modal-lead\">An intelligent agent that scrapes second-hand car listings from Belgium-based platforms, predicts fair market prices, and delivers recommendations via email.</p>" +
+        "<h3>Key highlights</h3>" +
+        "<ul>" +
+        "<li>Scrapes listings from multiple Belgium platforms with user-defined filters and preferences.</li>" +
+        "<li>Applies ML models for fair market price prediction.</li>" +
+        "<li>Automated end-to-end pipeline from scraping and evaluation to autonomous email delivery.</li>" +
+        "</ul>"
+    },
+    "vehicle-insurance": {
+      title: "Vehicle Insurance Prediction – MLOps Pipeline",
+      subtitle: "Python · scikit-learn · XGBoost · MLflow · Docker · AWS S3 · 2026",
+      content:
+        "<p class=\"project-modal-lead\">End-to-end machine learning pipeline for vehicle insurance claim prediction with full MLOps lifecycle.</p>" +
+        "<h3>Key highlights</h3>" +
+        "<ul>" +
+        "<li>Data preprocessing, feature engineering, model training, and evaluation with scikit-learn and XGBoost.</li>" +
+        "<li>Versioned experiments and model artifacts with MLflow Model Registry.</li>" +
+        "<li>Containerized inference service with Docker; AWS S3 for artifact storage and cloud-ready deployment.</li>" +
+        "</ul>"
+    },
+    smartinfo: {
+      title: "SmartInfo – YouTube & Document Content Analyzer",
+      subtitle: "Python · LangChain · HuggingFace · FAISS · OpenAI API · React.js · FastAPI · Streamlit · Final Year Project · 2025",
+      content:
+        "<p class=\"project-modal-lead\">End-to-end RAG pipeline for intelligent Q&amp;A over YouTube transcripts and uploaded documents.</p>" +
+        "<h3>Key highlights</h3>" +
+        "<ul>" +
+        "<li>FAISS vector search, sentence embeddings, and LangChain agent tools for document and video Q&amp;A.</li>" +
+        "<li>Fine-tuned HuggingFace transformers for domain-specific NLP tasks.</li>" +
+        "<li>React.js frontend and Streamlit demo with FastAPI backend for a seamless AI copilot experience.</li>" +
+        "<li>Hybrid retrieval and advanced prompt engineering to improve relevance and reduce hallucinations.</li>" +
+        "</ul>"
     }
   };
 
