@@ -1,3 +1,16 @@
+// Navbar shadow on scroll
+(function () {
+  var nav = document.querySelector(".navbar");
+  if (!nav) return;
+
+  function onScroll() {
+    nav.classList.toggle("is-scrolled", window.scrollY > 24);
+  }
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+
 // Scroll reveal
 (function () {
   var els = document.querySelectorAll(".reveal");
